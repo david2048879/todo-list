@@ -1,13 +1,22 @@
-const save = document.querySelector('#button');
-save.addEventListener('click', add);
+const addform = document.querySelector('#addform');
+addform.addEventListener('submit', add);
 
-function add(){
+
+
+
+function add(e){
+    e.preventDefault();
+
+
     
     const name= document.querySelector('input[type=text]').value;
     const date= document.querySelector('input[type=date]').value;
     
 
    const listContainer=document.getElementById('list-container');
+   if(name&& date){
+
+    
 
 //create the new div to append to container
     const taskName = document.createElement("div");
@@ -55,29 +64,64 @@ function add(){
     }else{
         listStatus.innerHTML='';
     }
-    
 
+
+    
     taskStatus.appendChild(listStatus);
     listContainer.appendChild(taskStatus);
      console.log(taskStatus);
 
-    // const form = document.querySelector('form');
-    // form.submit;
-    // e.preventDefault();
-    // name.forEach( input=> input.value='')
-    save.addEventListener('click', ()=>{
-        save.querySelectorAll('input').value="";
-    })
-    
-    
+
+     // crate remove element
+
+    //  var remove = document.createElement('div');
+    //  remove.classList.add('remove');
+
+    //  const removep = document.createElement('p');
+    //  removep.innerHTML= 'remove task';
+
+    //  remove.appendChild(removep);
+    //  taskStatus.appendChild(remove);
+
+    //  console.log(remove);
+
+
+    //  delete task
+    //  const delettask= document.querySelector('.remove');
+
+    //  remove.addEventListener('click', deletetask);
+
+
+// reset form
+if(addform.submit){
+    addform.reset();
+
+}else{
+    alert('form not submited');
+}
+
+
+  
+
+  
+}else{
+    alert('form is ampt !');
+}
+
+
         
 }
 
 
+// function deletetask(e){
+//     const remove=document.querySelector('.remove')
+//     var taskStatus=document.querySelector('.task-list')
+//     if(confirm('are u sure u want to delete this task?')){
+//         taskStatus=e.target.parentElement;
+//         remove.removeChild(taskStatus);
+//     }
 
-
-
-
+// }
     
 
 

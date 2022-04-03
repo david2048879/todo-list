@@ -12,11 +12,11 @@
 
 <div class="container">
     <div class="tital">
-        <h2> to dos details</h2>
+        <h2> todos details.</h2>
     </div>
-    <form action="">
-        <input type="text" name="" id="name" placeholder="to do name">
-        <input type="date" name="" id="date" placeholder="enter text">
+    <form action="" id="addform">
+        <input type="text" name="" id="name" placeholder="to do name" required>
+        <input type="date" name="" id="date" placeholder="enter text" required>
 
         <input type="checkbox" name="" id="completed" value="completed" class="ckeckbox">
         <label for="completed">completed</label>
@@ -24,15 +24,15 @@
         <input type="checkbox" name="" id="not-completed" value="not completed" class="ckeckbox">
         <label for="not-completed">not-completed</label>
 
-        <input type="button" value="save" id="button">
+        <input type="submit" value="save" id="button">
+        
     </form>
 
     <div class="list-container" id="list-container">
         <div class="list"><h3>to do name</h3></div>
         <div class="list"><h3>date</h3></div>
         <div class="list"><h3>status</h3></div>
-       
-      
+
     </div>
 
   

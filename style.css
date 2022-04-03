@@ -17,6 +17,7 @@ form{
 .tital{
     background: rgb(146, 146, 121);
     text-align: center;
+    font-size: 2rem;
 }
 input{
     display: block;
@@ -50,6 +51,16 @@ input{
     border: 1px solid rgb(119, 101, 101);
     padding-left: 50px;
     padding-right: 50px;
+    display: flex;
 }
-
-
+.remove{
+    color: red;
+    position: relative;
+    left: 50px;
+    top: 0px;
+    
+}
+.remove:hover{
+   text-decoration: underline;
+   cursor: pointer;
+}
